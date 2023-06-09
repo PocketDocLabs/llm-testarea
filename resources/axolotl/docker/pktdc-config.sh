@@ -46,6 +46,8 @@ cd $WORKSPACE
 PEFT_COMMIT_HASH=${PEFT_COMMIT_HASH:-"70af02a2bca5a63921790036b2c9430edf4037e2"}
 pip install git+https://github.com/huggingface/peft.git@$PEFT_COMMIT_HASH
 
+unset DEBIAN_FRONTEND
+
 JUPYTER_PASSWORD=${JUPYTER_PASSWORD:-"axolotl"}
 
 echo "Launching Jupyter Lab with nohup..."
