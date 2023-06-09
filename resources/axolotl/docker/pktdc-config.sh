@@ -11,7 +11,9 @@
 # WORKSPACE /workspace/
 # WANDB_API_KEY change to your key from https://wandb.ai/authorize
 #
-# To test this in Codespaces, run `cd /workspaces/ && WORKSPACE=/workspaces/ llm-playground/scripts/entry/ax.sh`
+# To test this in Codespaces, run `cd /workspaces/ && WORKSPACE=/workspaces/ llm-testarea/main/resources/axolotl/docker/pktdc-config.sh`
+#
+# This was totally stolen from Utensil https://github.com/utensil/llm-playground/tree/main
 
 set -euxo pipefail
 
@@ -28,7 +30,7 @@ pip install jupyterhub notebook jupyterlab jupyterlab-git ipywidgets
 wget --quiet --show-progress https://github.com/Run-Pod/runpodctl/releases/download/v1.9.0/runpodctl-linux-amd -O runpodctl && \
     chmod +x runpodctl && \
     mv runpodctl /usr/bin/runpodctl
-    
+
 # prepare monitoring GPU
 pip install nvitop
 
