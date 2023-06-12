@@ -36,8 +36,6 @@ pip install nvitop
 
 # update axolotl
 cd $WORKSPACE
-git clone https://github.com/OpenAccess-AI-Collective/axolotl axolotl-update
-cp -r axolotl-update/* axolotl
 cd axolotl
 pip install -e .[gptq]
 cd $WORKSPACE
